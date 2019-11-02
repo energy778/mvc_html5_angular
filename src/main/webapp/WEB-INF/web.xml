@@ -7,7 +7,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/config/application-context.xml</param-value>
+        <param-value>/src/main/webapp/WEB-INF/config/application-context.xml</param-value>
     </context-param>
 
     <listener>
@@ -22,7 +22,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/config/mvc-config.xml</param-value>
+            <param-value>/src/main/webapp/WEB-INF/config/mvc-config.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
@@ -38,7 +38,7 @@
 
     <error-page>
         <error-code>404</error-code>
-        <location>/WEB-INF/view/error/errorpage.jsp</location>
+        <location>/src/main/webapp/WEB-INF/view/error/errorpage.jsp</location>
     </error-page>
 
     <!--Позволяет работать с русскими символами-->
