@@ -49,7 +49,7 @@
     <bean class="org.springframework.web.servlet.view.XmlViewResolver">
         <property name="order" value="0" />
         <property name="location">
-            <value>/src/main/webapp/WEB-INF/config/excel-pdf-config.xml</value>
+            <value>/WEB-INF/config/excel-pdf-config.xml</value>
         </property>
     </bean>
 
