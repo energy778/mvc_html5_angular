@@ -2,9 +2,6 @@ package ru.javastudy.mvcHtml5Angular.mvc.bean;
 
 import java.io.Serializable;
 
-/**
- * Created for JavaStudy.ru on 26.02.2016.
- */
 public class DBLog implements Serializable {
 
     private static final long serialVersionUID = 1L;

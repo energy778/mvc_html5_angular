@@ -3,12 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans.xsd
    http://www.springframework.org/schema/mvc
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
    http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context.xsd">
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/tx
+   http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- context:component-scan This tag will scan @Component, @Repository, @Service, @Controller
          and also resolves @Autowired and @Qualifier -->
@@ -22,6 +25,9 @@
      -->
     <mvc:annotation-driven/>
 
+    <!-- activate @Transactional JPA annotation -->
+    <tx:annotation-driven/>
+
     <!--org.springframework.web.servlet.PageNotFound.noHandlerFound No mapping found
     for HTTP request with URI [/jdbcUpdate/user/username/user@javastudy.ru/enabled/resources/css/bootstrap.css]
      in DispatcherServlet with name 'dispatcherServlet'-->
@@ -34,7 +40,6 @@
         <property name="prefix" value="/WEB-INF/view"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
 
     <!--
        mvc:annotation-driven configures Spring MVC annotations
@@ -71,6 +76,8 @@
     <mvc:view-controller path="/file.html" view-name="/file/file"/>
     <mvc:view-controller path="/jdbc.html" view-name="/jdbc/jdbc"/>
     <mvc:view-controller path="/email.html" view-name="/email/email"/>
+<!--    <mvc:view-controller path="/rest.html" view-name="/rest/rest"/>-->
+    <mvc:view-controller path="/orm.html" view-name="/orm/orm"/>
 
     <!-- Static Resources Configuration (get access to static sources such as CSS and JavaScript files) -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
