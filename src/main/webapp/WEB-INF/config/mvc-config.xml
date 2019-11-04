@@ -64,11 +64,10 @@
     </bean>
 
     <!--Excel and PDF xml view configuration -->
+    <!--disabling for jUnit test. -->
     <bean class="org.springframework.web.servlet.view.XmlViewResolver">
         <property name="order" value="0" />
-        <property name="location">
-            <value>/WEB-INF/config/excel-pdf-config.xml</value>
-        </property>
+        <property name="location" value="/WEB-INF/config/excel-pdf-config.xml"/>
     </bean>
 
     <mvc:interceptors>
@@ -89,7 +88,7 @@
     <mvc:view-controller path="/orm.html" view-name="/orm/orm"/>
     <mvc:view-controller path="/jstl.html" view-name="/jstl/jstl"/>
     <mvc:view-controller path="/scope.html" view-name="/scope/scope"/>
-    <mvc:view-controller path="/cookieView.html" view-name="/cookie/cookie"/>
+    <mvc:view-controller path="/cookieView.html" view-name="/cookie/cookieView"/>
 
     <!-- Static Resources Configuration (get access to static sources such as CSS and JavaScript files) -->
     <mvc:resources mapping="/resources/**" location="/resources/" />

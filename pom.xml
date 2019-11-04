@@ -196,6 +196,21 @@
             <version>${quartz.scheduling.version}</version>
         </dependency>
 
+        <!--JUnit Test-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Test Artifacts with Spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <!--http://startbootstrap.com/template-overviews/modern-business/  this is theme-->
