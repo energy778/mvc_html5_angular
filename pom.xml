@@ -32,6 +32,9 @@
         <!-- Spring Data -->
         <spring-framework.data.version>1.9.1.RELEASE</spring-framework.data.version>
 
+        <!-- Quartz scheduling framework -->
+        <quartz.scheduling.version>2.2.1</quartz.scheduling.version>
+
     </properties>
 
     <dependencyManagement>
@@ -184,6 +187,13 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
             <version>${spring-framework.data.version}</version>
+        </dependency>
+
+        <!-- Quartz scheduling framework -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.scheduling.version}</version>
         </dependency>
 
     </dependencies>
