@@ -35,6 +35,5 @@ public class SecurityController {
     public ModelAndView adminMethodSecured() {
         System.out.println("SecurityController adminMethodSecured() is called with ADMIN ROLE");
         return new ModelAndView("/security/admin");
-
     }
 }
