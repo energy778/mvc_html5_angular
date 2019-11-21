@@ -37,3 +37,5 @@ public class SecurityController {
         return new ModelAndView("/security/admin");
     }
 }
+
+//http://javastudy.ru/spring-mvc/security/

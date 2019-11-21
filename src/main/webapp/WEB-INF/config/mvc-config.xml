@@ -29,7 +29,14 @@
         HttpMessageConverter support for @RequestBody method parameters and @ResponseBody method return values
         from @RequestMapping or @ExceptionHandler methods.
      -->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven>
+        <!--use int RestController to produce pretty json response-->
+        <mvc:message-converters>
+            <bean id="jacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="prettyPrint" value="true" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
     <!-- activate @Transactional JPA annotation -->
     <tx:annotation-driven/>
@@ -45,22 +52,6 @@
         <property name="order" value="1"/>
         <property name="prefix" value="/WEB-INF/view"/>
         <property name="suffix" value=".jsp"/>
-    </bean>
-
-    <!--
-       mvc:annotation-driven configures Spring MVC annotations
-       Support for validating @Controller inputs with @Valid, if a JSR-303 Provider is present on the classpath.
-       HttpMessageConverter support for @RequestBody method parameters and @ResponseBody method return values
-       from @RequestMapping or @ExceptionHandler methods.
-    -->
-    <mvc:annotation-driven/>
-
-    <!-- ViewResolver bean config for mapping strings to jsp views -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
-        <property name="order" value="1" />
-        <property name="prefix" value="/WEB-INF/view/" />
-        <property name="suffix" value=".jsp" />
     </bean>
 
     <!-- File Upload bean config-->
@@ -92,7 +83,7 @@
     <mvc:view-controller path="/file.html" view-name="/file/file"/>
     <mvc:view-controller path="/jdbc.html" view-name="/jdbc/jdbc"/>
     <mvc:view-controller path="/email.html" view-name="/email/email"/>
-<!--    <mvc:view-controller path="/rest.html" view-name="/rest/rest"/>-->
+    <mvc:view-controller path="/rest.html" view-name="/rest/rest"/>
     <mvc:view-controller path="/orm.html" view-name="/orm/orm"/>
     <mvc:view-controller path="/jstl.html" view-name="/jstl/jstl"/>
     <mvc:view-controller path="/scope.html" view-name="/scope/scope"/>

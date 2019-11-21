@@ -149,4 +149,7 @@
         </property>
     </bean>
 
+    <!-- REST template configuration -->
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+
 </beans>

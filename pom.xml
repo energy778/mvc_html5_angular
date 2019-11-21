@@ -27,6 +27,9 @@
         <logback.version>1.0.13</logback.version>
         <slf4j.version>1.7.13</slf4j.version>
 
+        <!-- jackson json JSON Processing API -->
+        <jackson.databind-version>2.2.3</jackson.databind-version>
+
         <!-- Hibernate / JPA -->
         <hibernate.version>5.0.1.Final</hibernate.version>
         <!-- Spring Data -->
@@ -229,6 +232,20 @@
             <groupId>javax.annotation</groupId>
             <artifactId>jsr250-api</artifactId>
             <version>1.0</version>
+        </dependency>
+
+        <!-- JAXB XML Binding (@XmlElement, @XMLRoot)-->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.2.10</version>
+        </dependency>
+
+        <!-- Spring REST jackson JSON Processing API -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.databind-version}</version>
         </dependency>
 
     </dependencies>
