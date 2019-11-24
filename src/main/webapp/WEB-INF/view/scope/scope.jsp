@@ -28,6 +28,7 @@
             <c:url value="/scopeSession" var="scopeSession" />
             <c:url value="/invalidateSession" var="invalidateSession" />
             <c:url value="/scopeRequest" var="scopeRequest" />
+            <c:url value="/scopeRequest" var="scopeRequest" />
             <c:url value="/file.html" var="file" />
             <!-- Content Row -->
             <div class="row">

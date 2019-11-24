@@ -38,6 +38,8 @@
             <c:url value="/scope.html" var="scope" />
             <c:url value="/cookie.html" var="cookie" />
             <c:url value="/security.html" var="security" />
+            <c:url value="/angularjson.html" var="angularjson" />
+            <c:url value="/expressions.html" var="expressions" />
 
             <div class="row">
 
@@ -66,7 +68,7 @@
                                         <a href="${email}">Java Email API and Spring Mail</a>
                                     </li>
                                     <li>
-                                        <a href="${rest}">Rest Services</a>
+                                        <a href="${rest}">Rest Services (JSON and XML)</a>
                                     </li>
                                     <li>
                                         <a href="${orm}">Spring MVC и Hibernate 5</a>
@@ -85,6 +87,17 @@
                                     </li>
                                     <li>
                                         <a href="${security}">Spring Security</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/angularIndex.html">AngularJS</a>
+                                <ul>
+                                    <li>
+                                        <a href="${angularjson}">JavaScript Object Notation .stringify</a>
+                                    </li>
+                                    <li>
+                                        <a href="${expressions}">AngularJS Expressions</a>
                                     </li>
                                 </ul>
                             </li>

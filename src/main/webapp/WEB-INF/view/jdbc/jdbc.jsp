@@ -35,6 +35,7 @@
                 <!-- Sidebar Column -->
                 <div class="col-md-3">
                     <div class="list-group">
+
                         <a href="index.html" class="list-group-item">Home</a>
                         <a href="${jdbcQueryAllUsers}" class="list-group-item">get all users</a>
                         <a href="${jdbcInsert}/logstring/jdbcTestLogString" class="list-group-item">Jdbc insert</a>
@@ -53,12 +54,11 @@
                         <c:if test="${resultObject == 'false'}">
                             <font color="red"><b>${resultObject}</b></font>
                         </c:if>
-                        <c:if test="${resultObject !='true' and resultObject != 'false'}">
+                        <c:if test="${resultObject != 'true' and resultObject != 'false'}">
                             <p>${resultObject}</p>
                         </c:if>
                     </c:if>
                 </div>
-
             </div>
             <!-- /.row -->
 
@@ -69,3 +69,4 @@
 
     </jsp:body>
 </page:template>
+
